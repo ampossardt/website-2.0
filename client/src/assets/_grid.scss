@@ -1,0 +1,30 @@
+.container {
+  width: 65%;
+  margin: 30px auto;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+
+  .vertical-align {
+    align-items: center;
+  }
+}
+
+.col {
+  box-sizing: border-box;
+
+  &.half {
+    flex: 0 1 50%;
+    max-width: 50%;
+
+    &:nth-child(odd) {
+      padding-right: 10px;
+    }
+
+    &:nth-child(even) {
+      padding-left: 10px;
+    }
+  }
+}

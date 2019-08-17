@@ -1,0 +1,57 @@
+header {
+  width: 65%;
+  margin: 30px auto;
+
+  .links {
+    overflow: hidden;
+    margin: 0;
+
+    a {
+      position: relative;
+      display: inline-block;
+      text-decoration: none;
+      padding: 10px 15px;
+      color: #999;
+      overflow: hidden;
+      transition: color .4s;
+      margin-right: 10px;
+
+      &.active {
+        color: #fff;
+      }
+      
+      &::before, &::after {
+        content: '';
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: -1;
+      }
+  
+      &::before {
+        height: 180%;
+        width: 140%;
+        left: -20%;
+        top: 140%;
+        transform: rotate(15deg);
+        background-color: #5f27cd;
+        z-index: -1;
+        transition: top .6s;
+      }
+
+      &::after {
+        z-index: -2;
+        background-color: #212121;
+      }
+  
+      &.active {
+        &::before {
+          // height: 100%;
+          top: -40%;
+        }
+      }
+    }
+  }
+}
