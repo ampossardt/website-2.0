@@ -16,6 +16,10 @@ header {
       transition: color .4s;
       margin-right: 10px;
 
+      &:hover {
+        color: #fff;
+      }
+
       &.active {
         color: #fff;
       }
@@ -48,7 +52,6 @@ header {
   
       &.active {
         &::before {
-          // height: 100%;
           top: -40%;
         }
       }
