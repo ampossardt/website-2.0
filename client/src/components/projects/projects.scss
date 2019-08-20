@@ -9,20 +9,22 @@
   top: 0; left: 0;
 }
 
+.projects {
+  opacity: 0;
+  animation: show .4s .2s forwards;
+}
+
 .project {
   height: 30vh;
   width: 100%;
   position: relative;
   overflow: hidden;
+  opacity: 0;
   @include card-shadow;
-  transition: all .4s .4s;
+  transition: all .4s;
 
-  &.hide {
-    opacity: 0;
-  }
-  &.active {
-    width: 0;
-    height: 0;
+  &.show {
+    opacity: 1;
   }
 
   &:hover {
@@ -76,7 +78,7 @@
     }
 
     h2 {
-      color: #fff;
+      color: $white;
       padding: 2px 4px;
       display: inline-block;
       margin-left: 80px;
@@ -93,7 +95,7 @@
     p {
       padding: 10px;
       margin-left: 80px;
-      color: #fff;
+      color: $white;
       display: inline-block;
       background-color: #212121;
       transition: margin-left .4s;
@@ -105,27 +107,17 @@
       transition: all .4s;
 
       .fa {
-        color: #fff;
+        color: $white;
         font-size: 3.2em;
         padding: 20px 27px;
         cursor: pointer;
       }
     }
-
-    &.clicked {
-      .text {
-        margin-left: -100%;
-      }
-      .btn-container {
-        margin-left: calc(100% + 120px);
-      }
-    }
   }
 }
 
-@keyframes shrink {
+@keyframes show {
   100% {
-    width: 0;
-    height: 0;
+    opacity: 1;
   }
 }

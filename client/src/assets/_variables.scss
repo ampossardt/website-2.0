@@ -2,8 +2,30 @@ $purple: #8e44ad;
 $dark-purple: #5f27cd;
 $blue: #2980b9;
 $dark-blue: #341f97;
+$white: #EBEBEB;
+
+// Styles for detail container
+$detail-blue-3: #82ccdd;
+$detail-blue-4: #60a3bc;
+$detail-blue-1: #38ada9;
+$detail-blue-2: #6a89cc;
+$detail-blue-5: #4a69bd;
 
 @mixin card-shadow {
   -webkit-box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);
   box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);
+}
+
+@mixin card-shadow-2 {
+  -webkit-box-shadow: 0 8px 17px 2px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 17px 2px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.2);
+}
+
+@mixin icon {
+  &::before {
+    font-family: FontAwesome;
+    font-weight: normal;
+    display: inline-block;
+    margin-right: 5px;
+  }
 }

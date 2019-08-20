@@ -9,7 +9,7 @@ class Header extends React.Component {
 
   render() {
     return (
-      <header>
+      <header className="navigation">
         <figure className="links">
           <a 
             href="#projects"

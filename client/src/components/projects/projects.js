@@ -16,13 +16,13 @@ class Projects extends React.Component {
 
   render() {
     return (
-      <div className="container flex projects">
+      <div className={ `container flex projects` }>
         {
-          this.props.content.map(item => 
+          this.props.content.map((item, index) => 
             <Project
               key={ item.key }
               data={ item }
-              isActiveProject={ this.state.activeProject === item.key }
+              delay={ (index * 125) + 100 }
               isDetailActive={ this.state.activeProject }
               onProjectActivated={ () => this.handleProjectActivated(item.key) }
                />

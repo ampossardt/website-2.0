@@ -37,7 +37,7 @@ class Router extends React.Component {
       case 'projects':
         if(this.state.query && this.state.query[0] === 'id') {
           return <ProjectDetail
-                    content={this.props.content.filter(x => x.id === this.state.query[1]) } />
+                    content={this.props.content.find(x => x.key === this.state.query[1]) } />
         } else {
           return <Projects
                     content={this.props.content} />

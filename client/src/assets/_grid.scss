@@ -1,6 +1,10 @@
 .container {
   width: 65%;
   margin: 30px auto;
+
+  &.full-width {
+    width: 100%;
+  }
 }
 
 .flex {

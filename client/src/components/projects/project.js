@@ -8,10 +8,14 @@ class Project extends React.Component {
   render() {
     return(
       <div className="col half">
-        <div className={ `project ${ this.props.isDetailActive && (!this.props.isActiveProject ? 'hide' : 'active') }`}>
+        <div className={ `project ${(!this.props.isDetailActive || '') && 'show'}` } 
+          style={{
+            animationDelay: `${this.props.delay / 1000}s`, 
+            transitionDelay: `${this.props.delay / 1000}s` 
+          }}>
           <span className="background-color"></span>
           <span className="background-image" style={ { backgroundImage: `url(${this.props.data.imageUrl})` } }></span>
-          <div className={ `content flex vertical-align ${this.props.isDetailActive && (this.props.isActiveProject ? 'clicked' : '') }`}>
+          <div className="content flex vertical-align">
             <div className="text">
               <h2>{ this.props.data.title }</h2><br/>
               <p>{ this.props.data.summary }</p>

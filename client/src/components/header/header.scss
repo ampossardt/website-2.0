@@ -1,4 +1,4 @@
-header {
+.navigation {
   width: 65%;
   margin: 30px auto;
 
@@ -17,11 +17,11 @@ header {
       margin-right: 10px;
 
       &:hover {
-        color: #fff;
+        color: $white;
       }
 
       &.active {
-        color: #fff;
+        color: $white;
       }
       
       &::before, &::after {
