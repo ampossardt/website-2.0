@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const port = 3500;
 const Flickr = require('flickr-sdk');
+const fetch = require('node-fetch');
 
 const nsid = '81790731@N03';
 const photosetId = '72157710456920277';
@@ -13,10 +14,7 @@ app.get('/', (request, response) => {
   // flickr.photosets.getList()
   //   .then(data => console.log);
 
-  flickr.people.findByUsername({
-    username: 'a.possardt'
-  }).then(data => console.log)
-  .catch(error => console.error);
+  fetch(`https://www.flickr.com/services/rest/?method=${'flickr.people.findByUsername'}&name=${value}`)
 
   // flickr.photosets.getPhotos({
   //   photoset_id: photosetId,
