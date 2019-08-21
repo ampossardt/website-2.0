@@ -11,7 +11,7 @@ class Projects extends React.Component {
 
     setTimeout(() => {
       window.location.hash = `${window.location.hash}?id=${projectId}`;
-    }, 800);
+    }, 600);
   };
 
   render() {

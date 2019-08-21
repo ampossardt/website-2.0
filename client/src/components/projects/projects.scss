@@ -9,11 +9,6 @@
   top: 0; left: 0;
 }
 
-.projects {
-  opacity: 0;
-  animation: show .4s .2s forwards;
-}
-
 .project {
   height: 30vh;
   width: 100%;
@@ -21,9 +16,10 @@
   overflow: hidden;
   opacity: 0;
   @include card-shadow;
-  transition: all .4s;
+  animation: show-project .4s forwards;
 
-  &.show {
+  &.leave {
+    animation: hide-project .4s forwards;
     opacity: 1;
   }
 
@@ -116,8 +112,14 @@
   }
 }
 
-@keyframes show {
+@keyframes show-project {
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes hide-project {
+  100% {
+    opacity: 0;
   }
 }

@@ -8,10 +8,9 @@ class Project extends React.Component {
   render() {
     return(
       <div className="col half">
-        <div className={ `project ${(!this.props.isDetailActive || '') && 'show'}` } 
+        <div className={ `project ${(this.props.isDetailActive || '') && 'leave'}` } 
           style={{
-            animationDelay: `${this.props.delay / 1000}s`, 
-            transitionDelay: `${this.props.delay / 1000}s` 
+            animationDelay: `${this.props.delay / 1000}s`
           }}>
           <span className="background-color"></span>
           <span className="background-image" style={ { backgroundImage: `url(${this.props.data.imageUrl})` } }></span>

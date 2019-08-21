@@ -5,13 +5,21 @@ class ProjectDetail extends React.Component {
     super(props);
 
     this.state = {
-      animate: false
+      animateLeave: false
     };
+  }
+
+  onLeave = () => {
+    this.setState({ animateLeave: true });
+
+    setTimeout(() => {
+      window.history.back();
+    }, 300);
   }
 
   render() {
     return (
-      <div className="container project-detail flex">
+      <div className={`container project-detail flex ${(this.state.animateLeave || '') && 'leave'}`}>
         {/* <svg className="polygon" viewBox="0 0 400 100">
           <polygon className="blue3" points="0 0, 100 0, 100 25, 0 50" />
           <polygon className="blue4" points="100 0, 200 0, 100 25" />
@@ -31,7 +39,7 @@ class ProjectDetail extends React.Component {
         </div>
         <div className="content flex">
           <header>
-            <button className="button back" onClick={() => { window.history.back() }}>Back</button>
+            <button className="button back" onClick={ this.onLeave }>Back</button>
             <h1>{this.props.content.title}</h1>
           </header>
           <div className="inner-content" dangerouslySetInnerHTML={{ __html: this.props.content.text}}>

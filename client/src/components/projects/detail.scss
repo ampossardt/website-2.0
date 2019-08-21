@@ -9,6 +9,12 @@
   border-radius: 6px;
   @include card-shadow;
 
+  &.leave {
+    animation: hide .4s forwards;
+    margin-left: 17.5%;
+    opacity: 1;
+  }
+
   h1 {
     font-size: 1.8em;
     background-color: $detail-blue-5;
@@ -223,5 +229,12 @@
    100% {
      margin-left: 17.5%;
      opacity: 1;
+   }
+ }
+
+ @keyframes hide {
+   100% {
+     margin-left: 19%;
+     opacity: 0;
    }
  }
