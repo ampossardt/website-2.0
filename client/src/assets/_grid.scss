@@ -37,15 +37,5 @@
     flex: 1 1 25%;
     max-width: 25%;
     padding: 0 10px;
-
-    &:first-child {
-      padding-left: 0;
-      padding-right: 10px;
-    }
-
-    &:nth-child(even) {
-      padding-right: 0;
-      padding-left: 10px;
-    }
   }
 }

@@ -2,6 +2,7 @@ import React from 'react';
 
 import Projects from '../projects/projects';
 import ProjectDetail from '../projects/detail';
+import Photos from '../photos/photos';
 
 class Router extends React.Component {
   constructor(props) {
@@ -9,10 +10,20 @@ class Router extends React.Component {
 
     this.state = {
       hash: 'projects',
-      query: ''
+      query: '',
+      photos: []
     };
 
     this.initHashChangeListener();
+  }
+
+  componentDidMount() {
+    fetch('http://localhost:3500/photos')
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+        this.setState({ photos: data });
+      });
   }
 
   initHashChangeListener = () => {
@@ -43,7 +54,7 @@ class Router extends React.Component {
                     content={this.props.content} />
         }
       case 'photos':
-        return null;
+        return <Photos content={ this.state.photos } />;
       default:
         return null;
     }
