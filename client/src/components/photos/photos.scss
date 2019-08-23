@@ -1,15 +1,66 @@
 .photos {
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-height: 87vh;
+
   .card {
     width: 100%;
-    height: 300px;
     perspective: 1000px;
     transform-style: preserve-3d;
+    transition: margin .4s;
+    cursor: pointer;
+
+    &:hover {
+      margin-top: -10px;
+    }
 
     img {
       max-width: 100%;
       backface-visibility: hidden;
       transform: rotateX(90deg);
       animation: show-card .6s forwards;
+      @include card-shadow;
+    }
+  }
+
+  .detail-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.8);
+    left: 0;
+    top: 0;
+    opacity: 0;
+    animation: show-overlay .4s forwards;
+
+    &.hide {
+      opacity: 1;
+      animation: hide-overlay .4s forwards;
+    }
+
+    .content {
+      height: 100%;
+
+      .image {
+        margin: 0 auto;
+        position: relative;
+
+        img {
+          width: 1024px;
+          height: auto;
+        }
+        
+        .far {
+          position: absolute;
+          color: $white;
+          font-size: 2em;
+          padding: 10px;
+          right: -30px;
+          left: 100%;
+          bottom: 100%;
+          cursor: pointer;
+        }
+      }
     }
   }
 }
@@ -17,5 +68,17 @@
 @keyframes show-card {
   100% {
     transform: rotateX(0deg);
+  }
+}
+
+@keyframes show-overlay {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes hide-overlay {
+  100% {
+    opacity: 0;
   }
 }

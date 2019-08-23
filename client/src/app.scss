@@ -142,6 +142,19 @@ main {
   }
 }
 
+::-webkit-scrollbar {
+  background-color: transparent;
+  width: 7px;
+}
+::-webkit-scrollbar-track-piece {
+  background-color: #212121;
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: $dark-purple;
+  border-radius: 6px;
+}
+
 @keyframes rotate {
   0% {
     filter: hue-rotate(0deg);

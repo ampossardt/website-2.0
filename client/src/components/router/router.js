@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { config } from '../../assets/constants';
 import Projects from '../projects/projects';
 import ProjectDetail from '../projects/detail';
 import Photos from '../photos/photos';
@@ -18,11 +19,10 @@ class Router extends React.Component {
   }
 
   componentDidMount() {
-    fetch('http://localhost:3500/photos')
+    fetch(`${config.apiUrl}/photos`)
       .then(response => response.json())
       .then(data => {
-        console.log(data);
-        this.setState({ photos: data });
+        this.setState({ photos: data.photos });
       });
   }
 

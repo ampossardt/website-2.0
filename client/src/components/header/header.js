@@ -1,7 +1,7 @@
 import React from 'react';
 
 class Header extends React.Component {
-  state = { activeLink: 1 };
+  state = { activeLink: 2 };
 
   changeActiveLink = (activeLink) => {
     this.setState({ activeLink });
@@ -10,22 +10,23 @@ class Header extends React.Component {
   render() {
     return (
       <header className="navigation">
+        <h1>andrew possardt</h1>
         <figure className="links">
           <a 
-            href="#projects"
+            href="#about"
             className={ (this.state.activeLink === 1 || '') && 'active' }
             onClick={() => this.changeActiveLink(1) }>
+            about</a>
+          <a 
+            href="#projects"
+            className={ (this.state.activeLink === 2 || '') && 'active' }
+            onClick={() => this.changeActiveLink(2) }>
             projects</a>
           <a 
             href="#photos"
-            className={ (this.state.activeLink === 2 || '') && 'active' }
-            onClick={() => this.changeActiveLink(2) }>
-            photography</a>
-          <a 
-            href="#github"
             className={ (this.state.activeLink === 3 || '') && 'active' }
             onClick={() => this.changeActiveLink(3) }>
-            github</a>
+            photography</a>
         </figure>
       </header>
     );
