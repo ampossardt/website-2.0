@@ -1,0 +1,35 @@
+.about {
+  // height: 60vh;
+
+  height: 0;
+  width: 100%;
+  background-color: #212121;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  animation: pop-in .6s forwards;
+  &.show {
+    animation: pop-in .6s forwards;
+  }
+  &.hide {
+    height: 100%;
+    animation: pop-out .6s forwards;
+  }
+
+  svg {
+    width: 50%;
+    height: 50%;
+  }
+}
+
+@keyframes pop-in {
+  100% {
+    height: 100%;
+  }
+}
+
+@keyframes pop-out {
+  100% {
+    height: 0;
+  }
+}

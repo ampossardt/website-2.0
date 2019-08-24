@@ -4,6 +4,7 @@ import { config } from '../../assets/constants';
 import Projects from '../projects/projects';
 import ProjectDetail from '../projects/detail';
 import Photos from '../photos/photos';
+import About from '../about/about';
 
 class Router extends React.Component {
   constructor(props) {
@@ -55,6 +56,8 @@ class Router extends React.Component {
         }
       case 'photos':
         return <Photos content={ this.state.photos } />;
+      case 'about':
+        return <About />
       default:
         return null;
     }
