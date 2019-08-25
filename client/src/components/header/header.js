@@ -1,7 +1,21 @@
 import React from 'react';
 
 class Header extends React.Component {
-  state = { activeLink: 2 };
+  constructor(props) {
+    super(props);
+
+    this.state = { 
+      activeLink: 'projects'
+    };
+
+    window.addEventListener('hashchange', this.hashListener);
+  }
+
+  hashListener = (event) => {
+    const hash = event.newURL.substring(event.newURL.lastIndexOf('/') + 1);
+
+    this.setState({ activeLink: hash.split('?')[0].replace('#', '') });
+  }
 
   changeActiveLink = (activeLink) => {
     this.setState({ activeLink });
@@ -14,18 +28,18 @@ class Header extends React.Component {
         <figure className="links">
           <a 
             href="#about"
-            className={ (this.state.activeLink === 1 || '') && 'active' }
-            onClick={() => this.changeActiveLink(1) }>
+            className={ (this.state.activeLink === 'about' || '') && 'active' }
+            onClick={() => this.changeActiveLink('about') }>
             about</a>
           <a 
             href="#projects"
-            className={ (this.state.activeLink === 2 || '') && 'active' }
-            onClick={() => this.changeActiveLink(2) }>
+            className={ (this.state.activeLink === 'projects' || '') && 'active' }
+            onClick={() => this.changeActiveLink('projects') }>
             projects</a>
           <a 
             href="#photos"
-            className={ (this.state.activeLink === 3 || '') && 'active' }
-            onClick={() => this.changeActiveLink(3) }>
+            className={ (this.state.activeLink === 'photos' || '') && 'active' }
+            onClick={() => this.changeActiveLink('photos') }>
             photography</a>
         </figure>
       </header>

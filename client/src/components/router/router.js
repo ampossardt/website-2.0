@@ -38,9 +38,6 @@ class Router extends React.Component {
     const hash = event.newURL.substring(event.newURL.lastIndexOf('/') + 1);
     const query = hash.indexOf('?') > -1 && hash.split('?')[1].split('=');
 
-    console.log(hash);
-    console.log(query);
-
     this.setState({ hash: hash.split('?')[0].replace('#', ''), query });
   }
 
