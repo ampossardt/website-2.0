@@ -23,8 +23,8 @@ class Header extends React.Component {
 
   render() {
     return (
-      <header className="navigation">
-        <h1>andrew possardt</h1>
+      <header className={`navigation ${(this.props.hide || '') && 'hide'}`}>
+        <h1 className="label">andrew possardt</h1>
         <figure className="links">
           <a 
             href="#about"

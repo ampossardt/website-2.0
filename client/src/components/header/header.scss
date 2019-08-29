@@ -1,16 +1,17 @@
 .navigation {
   width: 65%;
   margin: 30px auto;
+  transition: opacity .4s;
+
+  &.hide {
+    opacity: 0;
+  }
 
   h1 {
-    display: inline-block;
-    margin: 0;
-    vertical-align: top;
-    padding: 2px 6px;
-    font-size: 2.4em;
-    margin-right: 50px;
-    background-color: #212121;
-    color: $white;
+    &.label {
+      font-size: 2.4em;
+      margin-right: 50px;
+    }
   }
 
   .links {
@@ -61,7 +62,7 @@
 
       &::after {
         z-index: -2;
-        background-color: #212121;
+        background-color: $gray;
       }
   
       &.active {

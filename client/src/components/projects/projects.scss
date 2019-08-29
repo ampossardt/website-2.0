@@ -44,7 +44,7 @@
   .background-color {
     @include full-size-block;
 
-    background-color: #212121;
+    background-color: $gray;
     opacity: .95;
     transition: opacity .4s;
   }
@@ -93,7 +93,7 @@
       margin-left: 80px;
       color: $white;
       display: inline-block;
-      background-color: #212121;
+      background-color: $gray;
       transition: margin-left .4s;
       transition-delay: .15s;
       max-width: 380px;

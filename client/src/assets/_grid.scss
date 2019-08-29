@@ -14,6 +14,10 @@
   .vertical-align {
     align-items: center;
   }
+
+  .no-wrap {
+    flex-wrap: nowrap;
+  }
 }
 
 .col {

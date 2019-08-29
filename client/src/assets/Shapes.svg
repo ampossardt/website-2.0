@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 695 694.5">
+  <title>Shapes</title>
+  <g id="Line_13" data-name="Line 13">
+    <polygon points="0.5 597.2 253.5 343.8 253.5 366.8 0.5 620.3 0.5 597.2" fill="#2e3192"/>
+    <polygon points="253.5 344 437 160 437 183.5 253.5 366.8 253.5 344" fill="#662d91"/>
+    <polygon points="436.5 160 596 0.5 619.5 0.5 437 183.5 436.5 160" fill="#22b573"/>
+    <polygon points="0 620 620 0 695 0 0.5 694.5 0 620" fill="#93278f"/>
+  </g>
+  <g id="Line_12" data-name="Line 12">
+    <polygon points="0.5 574 230 344.5 253.5 344.5 0.8 597.3 0.5 574" fill="#0071bc"/>
+    <polygon points="230 344.5 413.5 160 437 160 253.5 344.5 230 344.5" fill="#1b1464"/>
+    <polygon points="413.5 160 573.5 0 597 0 437 160 413.5 160" fill="#662d91"/>
+  </g>
+  <g id="Layer_11" data-name="Layer 11">
+    <line x1="137.9" y1="320.6" x2="307.7" y2="150.8" fill="#fbb03b"/>
+    <line x1="266.2" y1="192.3" x2="248.2" y2="210.3" fill="#fbb03b"/>
+    <polyline points="266.3 192.8 373 86 488.4 86 381.8 192.5" fill="#8c6239"/>
+    <line x1="381.8" y1="192.3" x2="469.2" y2="104.8" fill="#fbb03b"/>
+    <polygon points="381.8 192.3 253.5 321 137.5 321 266.5 192 381.8 192.3" fill="#ff0"/>
+    <line x1="266.5" y1="192" x2="381.5" y2="192" fill="#fbb03b"/>
+    <polygon points="372.5 86 458 0.5 573.5 0.5 488.4 86 372.5 86" fill="#8cc63f"/>
+    <polygon points="0.5 458 137.5 321 253.5 321 0.5 574 0.5 458" fill="#fbb03b"/>
+  </g>
+  <g id="Line_10" data-name="Line 10">
+    <polyline points="157.5 221 238.5 221 0.8 458.3 0.5 378" fill="#006837"/>
+    <polyline points="157.7 221 378 1 458.5 1 238.3 221" fill="#ed1e79"/>
+    <line x1="0.5" y1="378" x2="157.7" y2="221" fill="#006837"/>
+  </g>
+  <g id="Line_9" data-name="Line 9">
+    <polyline points="235 144.5 213.5 166 1 378.5 0.5 331 165.5 166 187 144.5" fill="#3fa9f5"/>
+    <polyline points="187 144.5 330.5 1 378.5 1 235 144.5" fill="#d9e021"/>
+  </g>
+  <g id="Line_8" data-name="Line 8">
+    <polyline points="0.5 321 320.5 1 330.5 1 0.5 331" fill="#c1272d"/>
+    <path d="M0,290" transform="translate(0.5 1)" fill="#c1272d"/>
+    <path d="M0,290" transform="translate(0.5 1)" fill="#c1272d"/>
+    <path d="M0,290" transform="translate(0.5 1)" fill="blue"/>
+    <path d="M0,290" transform="translate(0.5 1)" fill="#c1272d"/>
+  </g>
+  <g id="Line_7" data-name="Line 7">
+    <polyline points="0.5 291 95.9 195 126.5 195 0.5 321 0.5 291"/>
+  </g>
+  <g id="Line_6" data-name="Line 6">
+    <polyline points="0.5 221 90.6 130.3 160.5 130.3 0.5 291 0.5 221" fill="red"/>
+    <polyline points="90.6 130.3 220.5 1 290.5 1 160.5 130.3 90.6 130.3" fill="#ff0"/>
+  </g>
+  <g id="Line_5" data-name="Line 5">
+    <polyline points="0.5 206 137.8 68 153 68 0.5 221 0.5 206" fill="#fbb03b"/>
+    <polyline points="137.4 68.5 205.5 1 220.5 1 153 68 137.4 68.5" fill="#00a99d"/>
+  </g>
+  <g id="Line_4" data-name="Line 4">
+    <path d="M0,145" transform="translate(0.5 1)" fill="none"/>
+  </g>
+  <g id="Line_3" data-name="Line 3">
+    <polyline points="0.5 121 50.5 71 75.5 71 0.5 146 0.5 121" fill="lime"/>
+    <polyline points="50.5 71 88.4 33.1 113.5 33.1 75.5 71 50.5 71" fill="#29abe2"/>
+    <polyline points="88.4 33.1 120.5 1 145.5 1 113.5 33 88.4 33.1" fill="#8cc63f"/>
+  </g>
+  <g id="Line_2" data-name="Line 2">
+    <polyline points="0.5 101 50.5 51 70.5 51 0.5 121 0.5 101"/>
+    <polyline points="50.5 51 100.5 1 120.5 1 70.5 51 50.5 51" fill="#fcee21"/>
+  </g>
+  <g id="Triangle_1" data-name="Triangle 1">
+    <polygon points="0.5 101 0.5 1 100.5 1 0.5 101" fill="red"/>
+    <polygon points="0.5 206 103 103 43.5 103 0.5 146 0.5 206"/>
+    <polygon points="43.5 103 145.5 1 205.5 1 103 103 43.5 103" fill="aqua"/>
+    <polygon points="96.1 195 190.6 99 222.5 99 126.5 195 96.1 195" fill="#f0f"/>
+    <polygon points="190.5 99 290.5 1 320.5 1 222.5 99 190.5 99" fill="#009245"/>
+  </g>
+</svg>

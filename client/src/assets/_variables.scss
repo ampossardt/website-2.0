@@ -3,6 +3,8 @@ $dark-purple: #5f27cd;
 $blue: #2980b9;
 $dark-blue: #341f97;
 $white: #EBEBEB;
+$gray: #212121;
+$dark-gray: #171717;
 
 // Styles for detail container
 $detail-blue-3: #82ccdd;
@@ -10,6 +12,10 @@ $detail-blue-4: #60a3bc;
 $detail-blue-1: #38ada9;
 $detail-blue-2: #6a89cc;
 $detail-blue-5: #4a69bd;
+$detail-blue-6: #7ed6df;
+$detail-blue-7: #22a6b3;
+$detail-blue-8: #686de0;
+$detail-blue-9: #30336b;
 
 @mixin card-shadow {
   -webkit-box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);
