@@ -12,9 +12,18 @@ body {
   margin: 0;
   overflow: hidden;
   max-height: 100vh;
+  font-family: 'Open Sans';
+  font-weight: 300;
+}
+
+input, button {
+  font-family: 'Open Sans';
+  font-weight: bold;
 }
 
 h1, h2, h3, h4 {
+  font-family: 'Varela';
+  font-weight: 400;
   &.label {
     display: inline-block;
     margin: 0;
