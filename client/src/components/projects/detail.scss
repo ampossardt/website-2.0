@@ -31,6 +31,14 @@
     transition: filter .4s;
     filter: grayscale(40%);
 
+    .credit {
+      position: absolute;
+      left: 0;
+      top: 0;
+      padding: 4px;
+      background-color: rgba(0,0,0,.6);
+    }
+
     &:hover {
       filter: grayscale(0);
     }

@@ -128,6 +128,14 @@ main {
   }
 }
 
+a {
+  color: $white;
+
+  &:visited, &:active, &:focus {
+    color: $white;
+  }
+}
+
 .button {
   outline: none;
   border: none;
@@ -142,11 +150,9 @@ main {
 
   a {
     text-decoration: none;
-    color: $white;
 
     &:visited, &:active, &:focus {
       text-decoration: none;
-      color: $white;
     }
   }
   

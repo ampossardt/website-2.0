@@ -17,6 +17,7 @@ const content = [
       'docker': 'Docker'
     },
     imageUrl: `${process.env.PUBLIC_URL}/artisan-wants.jpg`,
+    imageCredit: 'image credit: Keyforge @ <a href="https://www.keyforge.com" target="_blank" rel="noopener noreferrer">keyforge.com</a>',
     projectUrl: 'https://artisan-wants-client.herokuapp.com',
     githubUrl: 'https://github.com/ampossardt/artisan-trade-list-generator',
     key: uuid() 

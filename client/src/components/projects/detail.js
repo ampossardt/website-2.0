@@ -27,6 +27,7 @@ class ProjectDetail extends React.Component {
     return (
       <div className={`container project-detail flex ${(this.state.animateLeave || '') && 'leave'}`}>
         <div className="image flex" style={{ backgroundImage: `url(${this.props.content.imageUrl})` }}>
+          { this.props.content.imageCredit ? <span className="credit" dangerouslySetInnerHTML={{ __html: this.props.content.imageCredit }}></span> : null }
           <div className="code-links">
             <button className="button github" onClick={ this.clickChildAnchor }><a href={this.props.content.githubUrl} target="_blank" rel="noopener noreferrer">source code</a></button>
             <button className="button visit-project" onClick={ this.clickChildAnchor }><a href={this.props.content.projectUrl} target="_blank" rel="noopener noreferrer">visit project</a></button>
