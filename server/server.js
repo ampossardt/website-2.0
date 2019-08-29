@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 3500;
+const port = process.env.PORT || 3500;
 const Flickr = require('flickr-sdk');
 const fetch = require('node-fetch');
 
