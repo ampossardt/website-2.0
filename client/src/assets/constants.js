@@ -7,3 +7,5 @@ const prod = {
 }
 
 export const config = process.env.NODE_ENV === 'production' ? prod : dev;
+
+console.log(process.env.NODE_ENV);
