@@ -4,6 +4,15 @@ import aboutImage from '../../assets/about.jpg';
 
 class About extends React.Component {
   usedRandoms = [];
+  tech = [
+    { name: '.NET', primaryColor: '#171717', secondaryColor: '#fff', logo: '/netcore.svg' },
+    { name: 'Angular', primaryColor: '#171717', secondaryColor: '#fff', logo: '/angular.svg' },
+    { name: 'Kubernetes', primaryColor: '#171717', secondaryColor: '#fff', logo: '/kubernetes.svg' },
+    { name: 'Docker', primaryColor: '#171717', secondaryColor: '#fff', logo: '/docker.svg' },
+    { name: 'React', primaryColor: '#171717', secondaryColor: '#fff', logo: '/react.svg' },
+    { name: 'NodeJS', primaryColor: '#171717', secondaryColor: '#fff', logo: '/nodejs.svg' },
+    // { name: '.NET', primaryColor: '#171717', secondaryColor: '#fff', logo: '' },
+  ]
 
   constructor(props) {
     super(props);
@@ -50,27 +59,28 @@ class About extends React.Component {
       <div className={`container about flex vertical-align ${(this.state.hide || '') && 'hide'}`}>
         <svg
           viewBox="0 0 1600 900" 
+          className="animated"
           style={ { width: (window.innerWidth / 4) * 3, height: ((window.innerWidth / 4) * 3) * (9/16) } }>
           { 
             this.state.lines.map((item, index) => 
               <polygon 
                 key={index}
                 points={item.points} 
-                className={item.class} 
+                className={`transform ${item.class}`} 
                 style={ { transform: this.getTransform(item), animationDelay: `${item.delay}ms` }} />
             )
           }
         </svg>
         <svg
           viewBox="0 0 1600 900" 
-          style={ { width: (window.innerWidth / 4) * 3, height: ((window.innerWidth / 4) * 3) * (9/16) } }
-          className='flipped'>
+          className="animated flipped"
+          style={ { width: (window.innerWidth / 4) * 3, height: ((window.innerWidth / 4) * 3) * (9/16) } }>
           { 
             this.state.lines.map((item, index) => 
               <polygon
                 key={index}
                 points={item.points} 
-                className={item.class} 
+                className={`transform ${item.class}`} 
                 style={ { transform: this.getTransform(item), animationDelay: `${item.delay}ms` }} />
             )
           }
@@ -85,8 +95,20 @@ class About extends React.Component {
               <p>Hi, I'm Andrew.</p>
               <p>I'm a web developer from Atlanta, currently working with the .NET Core and Angular professionally. On my personal projects, I enjoy working with React and NodeJS.</p>
               <p>I like designing stuff for the web, but when I'm not doing that, I like to take pictures, drink beer, ride around pay-as-you-go electric scooters without purpose, and eat ramen.</p>
+              {/* <div className="tech-container flex">
+                { this.tech.map(item => 
+                    <div className="col fifth">
+                      <svg className="tech-shape" viewBox="0 0 600 600">
+                        <polygon points="294,3 585.246118,214.602691 474,556.983037 114,556.983037 2.753882,214.602691" fill={item.secondaryColor} />
+                        <polygon points="294,3 585.246118,214.602691 474,556.983037 114,556.983037 2.753882,214.602691" style={{ transform: 'translate(15px, 8px) scale(1, .99)'}} fill={item.primaryColor} />
+                      </svg>
+                      <img className="logo" src={item.logo} />
+                    </div>
+                  )
+                }
+              </div> */}
             </div>
-            <img src={aboutImage} />
+            <img className="profile" src={aboutImage} />
           </div>
         </div>
         

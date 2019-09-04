@@ -4,4 +4,10 @@
   position: absolute;
   left: 0; top: 0;
   z-index: 2;
+
+  @include responsive(mobile) {
+    width: 200%;
+    height: 200vh;
+    transition: left .5s top .5s;
+  }
 }

@@ -7,7 +7,7 @@ const content = [
     text: `
       <p>In the mechanical keyboard community, there are custom-made keycaps made in small quantities by artists known as artisans. These 'artisan keycaps' are coveted for many different reasons - the way the sculpt looks, the color of resin in which they were cast, or simply due to their rarity.</p>
       <p>The primary means of trading caps with community members is via a 'classifieds-style' subreddit called 'mechmarket'. Users put up timestamped pictures of the keycaps they would like to trade, requesting either PayPal as a means of payment, or suggest other caps that they are interested in. For simplicity, many users make a Google Docs document to list the particular caps, sculpts, and colorways they are looking for. Unfortunately, many are plain looking and aren't mobile-friendly.</p>
-      <p>The artisan wants generator looks to solve that by providing a way to build a 'wants list' via a WYSIWYG editor, then generating static HTML and CSS files which are uploaded to GitHub to be hosted on GitHub Pages. Users select content, colors, and finally upload the content, pushing the generated files to the default GitHub pages public reposity for their account.</p>
+      <p>The artisan wants generator looks to solve that by providing a way to build a 'wants list' via a WYSIWYG editor, then generating static HTML and CSS files which are uploaded to GitHub to be hosted on GitHub Pages. Users select content, colors, and finally upload the content, pushing the generated files to the default GitHub pages public repository for their account.</p>
     `,
     tech: {
       'react': 'React',

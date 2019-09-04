@@ -9,19 +9,36 @@
   border-radius: 6px;
   @include card-shadow;
 
+  @include responsive(mobile) { 
+    margin-left: 0; 
+    animation: show .4s forwards; 
+    flex-wrap: wrap-reverse; 
+    height: calc(100vh - 147px); 
+    background-color: transparent;
+    box-shadow: none;
+  }
+
   &.leave {
     animation: hide-detail .4s forwards;
     margin-left: 17.5%;
     opacity: 1;
+
+    @include responsive(mobile) { animation: hide .4s forwards; }
+  }
+
+  &.container {
+    @include responsive(mobile) { padding: 0; }
   }
 
   h1 {
-    font-size: 1.8em;
+    font-size: 1.7em;
     background-color: $detail-blue-5;
     color: $white;
     display: inline-block;
     padding: 0 4px;
     margin: 0 0 0 auto;
+
+    @include responsive(mobile) { margin: 0 auto; }
   }
 
   .image {
@@ -30,6 +47,11 @@
     background-position-x: 50%;
     transition: filter .4s;
     filter: grayscale(40%);
+    height: 100%;
+
+    @include responsive(mobile) {
+      height: auto;
+    }
 
     .credit {
       position: absolute;
@@ -37,6 +59,10 @@
       top: 0;
       padding: 4px;
       background-color: rgba(0,0,0,.6);
+
+      @include responsive(mobile) {
+        display: none;
+      }
     }
 
     &:hover {
@@ -46,13 +72,31 @@
 
   .content {
     display: flex;
-    padding: 20px;
+    padding: 20px 20px 0 20px;
     box-sizing: border-box;
     flex: 1 0 45%;
 
+    @include responsive(mobile) { padding: 0; flex-basis: 100%; }
+
     .inner-content {
-      height: 85%;
+      height: calc(60vh - 83px);
+      overflow-y: auto;
+      padding-right: 10px;
+
+      
+
+      p {
+        @include responsive(mobile) { margin-left: 10px; padding: 3px 5px; background-color: $dark-gray; }
+
+        &:first-child {
+          @include responsive(mobile) { margin-top: 0; }
+        }
+      }
     }
+  }
+
+  .back {
+    @include responsive(mobile) { display: none; }
   }
 
   .code-links {
@@ -60,10 +104,12 @@
     width: 100%;
     text-align: center;
     padding: 15px 0 15px 0;
-    background-color: rgba(255,255,255,.2);
+    background-color: rgba(0,0,0,.7);
+
+    @include responsive(mobile) { background-color: transparent; }
 
     .button {
-      font-size: 17px;
+      font-size: 1.063em;
       border: 3px solid #fff;
       border-top-width: 1px;
       border-left-width: 1px;
@@ -80,7 +126,7 @@
         }
 
         &:hover {
-          background-color: scale-color(#6e5494, $lightness: -15%);
+          background-color: scale-color(#6e5494, $lightness: -25%);
         }
       }
 
@@ -94,20 +140,24 @@
         }
 
         &:hover {
-          background-color: scale-color($blue, $lightness: -15%);
+          background-color: scale-color($blue, $lightness: -25%);
         }
       }
     }
   }
 
   .technology-container {
+    margin-top: 20px;
+
+    @include responsive(mobile) { margin: 0 0 0 10px; }
+
     .technology {
       display: inline-block;
       padding: 6px 8px 6px 6px;
       border-radius: 6px;
-      margin-right: 5px;
+      margin: 0 5px 5px 0;
       font-weight: bold;
-      font-size: 17px;
+      font-size: 1em;
       border-left-width: 3px;
       border-left-style: solid;
   
@@ -169,7 +219,7 @@
       @include icon;
     }
   }
- }
+}
 
  @keyframes show-detail {
    100% {

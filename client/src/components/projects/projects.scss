@@ -1,3 +1,5 @@
+@import '../../assets/mobile';
+
 @mixin full-size-block {
   display: block;
   width: 100%;
@@ -10,13 +12,15 @@
 }
 
 .project {
-  height: 30vh;
+  height: 35vh;
   width: 100%;
   position: relative;
   overflow: hidden;
   opacity: 0;
   @include card-shadow;
   animation: show-project .4s forwards;
+
+  @include responsive(mobile) { height: 30vh; }
 
   &.leave {
     animation: hide-project .4s forwards;
@@ -71,6 +75,8 @@
       display: inline-block;
       margin-bottom: 6vh;
       transition: flex-basis .4s, margin-left .4s;
+
+      @include responsive(mobile) { flex-basis: calc(100% - 210px); }
     }
 
     h2 {
@@ -79,6 +85,9 @@
       display: inline-block;
       margin-left: 80px;
       transition: margin-left .4s;
+      white-space: nowrap;
+
+      @include responsive(mobile) { margin-left: 10px; }
 
       &::before {
         content: '';
@@ -97,6 +106,10 @@
       transition: margin-left .4s;
       transition-delay: .15s;
       max-width: 380px;
+
+      @include responsive(desktop-medium) { max-width: 250px; }
+      @include responsive(desktop-small) { max-width: 200px; }
+      @include responsive(mobile) { max-width: 200px; margin-left: 10px; }
     }
 
     .btn-container {

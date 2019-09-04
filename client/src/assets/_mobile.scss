@@ -1,0 +1,19 @@
+$break-mobile : 600px;
+$break-small-desktop: 900px;
+$break-medium-desktop: 1300px;
+$break-large-desktop: 1700px;
+
+@mixin responsive($device) {
+  @if $device == mobile {
+    @media only screen and (max-width: $break-mobile) { @content; }
+  }
+  @else if $device == desktop-small {
+    @media only screen and (min-width: $break-small-desktop + 1) and (max-width: $break-medium-desktop - 1) { @content; }
+  }
+  @else if $device == desktop-medium {
+    @media only screen and (min-width: $break-medium-desktop + 1) and (max-width: $break-large-desktop - 1) { @content; }
+  }
+  @else if $device == desktop-large {
+    @media only screen and (min-width: $break-large-desktop) { @content; }
+  }
+}

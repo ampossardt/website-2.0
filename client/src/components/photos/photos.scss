@@ -3,6 +3,8 @@
   overflow-y: auto;
   max-height: 87vh;
 
+  @include responsive(mobile) { max-height: calc(100vh - 147px ); }
+
   .card {
     width: 100%;
     perspective: 1000px;
@@ -46,8 +48,9 @@
         position: relative;
 
         img {
-          width: 1024px;
+          width: 70%;
           height: auto;
+          @include responsive(mobile) { width: 100%; }
         }
         
         .far {

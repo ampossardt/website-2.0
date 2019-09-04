@@ -1,7 +1,13 @@
+@import '../../assets/mobile';
+
 .navigation {
   width: 65%;
   margin: 30px auto;
   transition: opacity .4s;
+
+  @include responsive(desktop-medium) { width: 75%; }
+  @include responsive(desktop-small) { width: 75%; }
+  @include responsive(mobile) { width: 100%; text-align:center; margin-top: 15px;}
 
   &.hide {
     opacity: 0;
@@ -11,6 +17,10 @@
     &.label {
       font-size: 2.4em;
       margin-right: 50px;
+
+      @include responsive(mobile) {
+        margin: 0 0 15px 0;
+      }
     }
   }
 
@@ -19,6 +29,11 @@
     margin: 0;
     display: inline-block;
     vertical-align: bottom;
+
+    @include responsive(mobile) {
+      display: flex;
+      flex-wrap: wrap;
+    }
 
     a {
       position: relative;
@@ -30,6 +45,14 @@
       transition: color .5s;
       margin-right: 10px;
       vertical-align: bottom;
+
+      @include responsive(mobile) {
+        flex: 1 1 33.3%;
+        max-width: 33.3%;
+        margin: 0;
+        padding-left: 0;
+        padding-right: 0;
+      }
 
       &:hover {
         color: $white;
