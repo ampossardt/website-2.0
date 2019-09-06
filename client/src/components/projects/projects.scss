@@ -104,7 +104,6 @@
       display: inline-block;
       background-color: $gray;
       transition: margin-left .4s;
-      transition-delay: .15s;
       max-width: 380px;
 
       @include responsive(desktop-medium) { max-width: 250px; }
